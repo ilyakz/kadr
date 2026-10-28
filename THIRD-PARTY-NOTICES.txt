@@ -1,0 +1,70 @@
+Kadr — third-party software notices
+====================================
+
+Kadr itself is licensed under the Apache License, Version 2.0 (LICENSE.txt, NOTICE.txt).
+It includes the following third-party components. Their licenses allow personal and
+commercial use and redistribution under the conditions given below.
+
+
+1. FFmpeg 9.0.2 — ffmpeg\ffmpeg.exe
+   License: GNU Lesser General Public License, version 2.1 or later (LGPL-2.1-or-later);
+   see ffmpeg\licenses\FFmpeg-COPYING.LGPLv2.1.txt and ffmpeg\licenses\FFmpeg-LICENSE.md.
+   Source: https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz (unmodified;
+   SHA-256 8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e).
+   Built without GPL or nonfree components; the exact configure line is in ffmpeg\BUILD-INFO.txt.
+   The complete source of this build — the FFmpeg and libvpl tarballs and the build scripts — is
+   published with every Kadr release as Kadr-<version>-ffmpeg-source.zip
+   (https://github.com/Ilyakz/kadr/releases). Kadr runs ffmpeg.exe as a separate program; you may
+   replace it with your own build of FFmpeg.
+   Statically linked into ffmpeg.exe:
+   - Intel Video Processing Library (libvpl) 2.17.0 — MIT License, Copyright (c) Intel Corporation;
+     see ffmpeg\licenses\libvpl-LICENSE.txt. https://github.com/intel/libvpl
+   - mingw-w64 runtime — permissive licenses (ZPL, MIT, public domain);
+     see ffmpeg\licenses\mingw-w64-runtime-copyright.txt.
+   - GCC runtime libraries (libgcc, libstdc++) — GPL-3.0 with the GCC Runtime Library
+     Exception 3.1, which permits linking them into programs under any license;
+     see ffmpeg\licenses\gcc-runtime-copyright.txt.
+
+2. .NET runtime and Windows Presentation Foundation (WPF) 10.0
+   License: MIT. Copyright (c) .NET Foundation and Contributors.
+   https://github.com/dotnet/runtime, https://github.com/dotnet/wpf
+
+3. CommunityToolkit.Mvvm 8.4.2
+   License: MIT. Copyright (c) .NET Foundation and Contributors.
+   https://github.com/CommunityToolkit/dotnet
+
+4. Vortice.Windows 3.8.3 (Vortice.Direct3D11, Vortice.DXGI, Vortice.DirectX, Vortice.D3DCompiler)
+   and Vortice.Mathematics 2.1.0
+   License: MIT. Copyright (c) Amer Koleci and Contributors.
+   https://github.com/amerkoleci/Vortice.Windows
+
+5. SharpGen.Runtime and SharpGen.Runtime.COM 2.4.2
+   License: MIT. Copyright (c) SharpGenTools contributors.
+   https://github.com/SharpGenTools/SharpGenTools
+
+6. C#/WinRT runtime and the Windows SDK projection (WinRT.Runtime.dll, Microsoft.Windows.SDK.NET.dll)
+   Copyright (c) Microsoft Corporation. C#/WinRT is MIT-licensed (https://github.com/microsoft/CsWinRT);
+   the projection is distributed with .NET applications for Windows under the Windows SDK license
+   (https://aka.ms/WinSDKLicenseURL).
+
+7. Inno Setup 6.7 (the installer and uninstaller only)
+   Copyright (C) 1997-2026 Jordan Russell. Portions Copyright (C) 2000-2026 Martijn Laan.
+   Inno Setup License, https://jrsoftware.org/files/is/license.txt
+
+
+MIT License (components 2–6)
+----------------------------
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
+OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

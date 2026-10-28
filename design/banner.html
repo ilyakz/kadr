@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kadr banner</title>
+<style>
+  :root {
+    --bg-1: #0d1117;
+    --bg-2: #161b26;
+    --ink: #f3f5f8;
+    --muted: #9aa4b2;
+    --rec: #ff5a4e;
+    --accent: #60cdff;
+    --chip: rgba(255, 255, 255, 0.07);
+    --chip-line: rgba(255, 255, 255, 0.12);
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1280px; height: 420px; overflow: hidden;
+    font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(900px 420px at 88% 30%, rgba(96, 205, 255, 0.16), transparent 60%),
+      radial-gradient(600px 300px at 10% 110%, rgba(255, 90, 78, 0.14), transparent 60%),
+      linear-gradient(135deg, var(--bg-1), var(--bg-2));
+    display: grid; grid-template-columns: 1fr 470px; align-items: center;
+    padding: 0 72px; box-sizing: border-box; gap: 48px;
+  }
+  .brand { display: flex; align-items: center; gap: 22px; }
+  .logo { width: 84px; height: 84px; }
+  h1 { font-size: 84px; line-height: 1; margin: 0; font-weight: 700; letter-spacing: -2px; }
+  .tagline { font-size: 30px; line-height: 1.25; margin: 26px 0 0; font-weight: 600; max-width: 640px; }
+  .sub { font-size: 20px; color: var(--muted); margin: 14px 0 0; max-width: 640px; line-height: 1.4; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .chip { font-size: 16px; padding: 7px 14px; border-radius: 999px; background: var(--chip); border: 1px solid var(--chip-line); color: #d6dce4; }
+
+  /* A stylised screen with the recording frame and the floating panel */
+  .screen { position: relative; width: 470px; height: 300px; border-radius: 14px;
+    background: linear-gradient(160deg, #222a38, #1a202b); border: 1px solid rgba(255,255,255,0.09);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.45); overflow: hidden; }
+  .bar { height: 26px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .line { position: absolute; left: 34px; height: 10px; border-radius: 5px; background: rgba(255,255,255,0.10); }
+  .region { position: absolute; left: 150px; top: 70px; width: 270px; height: 168px;
+    outline: 3px solid var(--rec); outline-offset: 0; border-radius: 2px;
+    background: linear-gradient(135deg, rgba(96,205,255,0.20), rgba(96,205,255,0.06)); }
+  .region .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .grip { position: absolute; left: 147px; top: 53px; width: 44px; height: 16px; border-radius: 4px 4px 0 0; background: var(--rec);
+    color: #fff; font-size: 11px; display: grid; place-items: center; letter-spacing: 1px; }
+  .panel { position: absolute; left: 50%; transform: translateX(-50%); bottom: 16px; display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; border-radius: 12px; background: rgba(20, 24, 32, 0.92); border: 1px solid rgba(255,255,255,0.12);
+    font-size: 15px; font-variant-numeric: tabular-nums; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rec); box-shadow: 0 0 0 4px rgba(255,90,78,0.25); }
+  .meter { width: 54px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #3ccf7a 0 60%, rgba(255,255,255,0.15) 60%); }
+  .btn { width: 22px; height: 22px; border-radius: 6px; background: rgba(255,255,255,0.10); display: grid; place-items: center; }
+  .btn .sq { width: 8px; height: 8px; background: #fff; border-radius: 1px; }
+  .btn .pa { width: 8px; height: 9px; border-left: 3px solid #fff; border-right: 3px solid #fff; box-sizing: border-box; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="brand">
+      <!-- The tray icon: viewfinder corners and the recording dot -->
+      <svg class="logo" viewBox="0 0 16 16" fill="none">
+        <path d="M2,5 V2 H5 M11,2 H14 V5 M14,11 V14 H11 M5,14 H2 V11" stroke="#f3f5f8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="8" cy="8" r="3" fill="#ff5a4e"/>
+      </svg>
+      <h1>Kadr</h1>
+    </div>
+    <p class="tagline" id="tagline">Screen recorder for Windows 11 — fast, offline, no strings attached</p>
+    <p class="sub" id="sub">Starts recording almost instantly, saves in a fraction of a second. No ads, watermarks, limits or accounts.</p>
+    <div class="chips" id="chips">
+      <span class="chip">Screen · region · window</span>
+      <span class="chip">Every mic + system sound</span>
+      <span class="chip">All screens at once</span>
+      <span class="chip">Intel Quick Sync</span>
+    </div>
+  </div>
+  <div class="screen" aria-hidden="true">
+    <div class="bar"></div>
+    <div class="line" style="top:46px;width:90px"></div>
+    <div class="line" style="top:66px;width:70px"></div>
+    <div class="line" style="top:86px;width:84px"></div>
+    <div class="line" style="top:106px;width:60px"></div>
+    <div class="grip">⋮⋮⋮</div>
+    <div class="region"><div class="play">
+      <svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,0.12)"/><path d="M10 8.5v7l6-3.5z" fill="#fff"/></svg>
+    </div></div>
+    <div class="panel">
+      <span class="dot"></span><span>00:01:24</span><span class="meter"></span>
+      <span class="btn"><span class="pa"></span></span><span class="btn"><span class="sq"></span></span>
+    </div>
+  </div>
+  <script>
+    // ?lang=ru renders the Russian banner from the same layout.
+    if (new URLSearchParams(location.search).get('lang') === 'ru') {
+      document.documentElement.lang = 'ru';
+      document.getElementById('tagline').textContent = 'Запись экрана для Windows 11 — быстро, офлайн, без условий';
+      document.getElementById('sub').textContent = 'Запись начинается почти сразу, сохранение — доли секунды. Без рекламы, водяных знаков, лимитов и регистрации.';
+      document.getElementById('chips').innerHTML =
+        '<span class="chip">Экран · область · окно</span><span class="chip">Все микрофоны и системный звук</span>' +
+        '<span class="chip">Все экраны сразу</span><span class="chip">Intel Quick Sync</span>';
+    }
+  </script>
+</body>
+</html>

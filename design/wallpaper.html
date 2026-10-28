@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kadr demo desktop</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body {
+    width: 1920px; height: 1200px; overflow: hidden; position: relative;
+    font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+    background:
+      radial-gradient(1200px 800px at 15% 20%, #3a6df0 0%, transparent 60%),
+      radial-gradient(1000px 700px at 85% 80%, #b04cf0 0%, transparent 60%),
+      radial-gradient(900px 600px at 70% 10%, #20c5c9 0%, transparent 55%),
+      #1b2140;
+  }
+  .win { position: absolute; border-radius: 14px; background: rgba(250, 251, 253, 0.96); box-shadow: 0 30px 80px rgba(0,0,0,0.35); overflow: hidden; }
+  .win .t { height: 44px; background: #eef1f6; display: flex; align-items: center; gap: 8px; padding: 0 18px; font-size: 17px; color: #4a5260; }
+  .win .t i { width: 12px; height: 12px; border-radius: 50%; background: #c9ced8; display: inline-block; }
+  .doc { padding: 34px 40px; }
+  .h { height: 26px; width: 55%; background: #1f2633; border-radius: 6px; margin-bottom: 26px; }
+  .p { height: 14px; background: #d5dae3; border-radius: 7px; margin: 14px 0; }
+  .chart { display: flex; align-items: flex-end; gap: 18px; height: 260px; padding: 30px 40px; }
+  .bar { flex: 1; border-radius: 8px 8px 0 0; background: linear-gradient(#5b8cff, #3a6df0); }
+  .slide { position: absolute; inset: 44px 0 0 0; display: grid; place-items: center; background: linear-gradient(135deg, #ff7a59, #ff4e8a); color: #fff; font-size: 64px; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="win" style="left:120px; top:120px; width:900px; height:620px">
+    <div class="t"><i></i><i></i><i></i>&nbsp; Quarterly review.docx</div>
+    <div class="doc">
+      <div class="h"></div>
+      <div class="p" style="width:92%"></div><div class="p" style="width:86%"></div><div class="p" style="width:90%"></div>
+      <div class="p" style="width:70%"></div><div class="p" style="width:88%"></div><div class="p" style="width:60%"></div>
+    </div>
+    <div class="chart">
+      <div class="bar" style="height:40%"></div><div class="bar" style="height:65%"></div><div class="bar" style="height:52%"></div>
+      <div class="bar" style="height:80%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:95%"></div>
+    </div>
+  </div>
+  <div class="win" style="left:1080px; top:260px; width:720px; height:470px">
+    <div class="t"><i></i><i></i><i></i>&nbsp; Product demo</div>
+    <div class="slide">Hello, Kadr!</div>
+  </div>
+</body>
+</html>
