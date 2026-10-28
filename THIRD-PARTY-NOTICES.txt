@@ -28,6 +28,8 @@ commercial use and redistribution under the conditions given below.
 2. .NET runtime and Windows Presentation Foundation (WPF) 10.0
    License: MIT. Copyright (c) .NET Foundation and Contributors.
    https://github.com/dotnet/runtime, https://github.com/dotnet/wpf
+   The runtime itself contains third-party code (for example Brotli, zlib-ng, Unicode data); their
+   notices are in dotnet-THIRD-PARTY-NOTICES.txt next to this file.
 
 3. CommunityToolkit.Mvvm 8.4.2
    License: MIT. Copyright (c) .NET Foundation and Contributors.
@@ -38,8 +40,9 @@ commercial use and redistribution under the conditions given below.
    License: MIT. Copyright (c) Amer Koleci and Contributors.
    https://github.com/amerkoleci/Vortice.Windows
 
-5. SharpGen.Runtime and SharpGen.Runtime.COM 2.4.2
-   License: MIT. Copyright (c) SharpGenTools contributors.
+5. SharpGen.Runtime and SharpGen.Runtime.COM 2.4.2-beta
+   License: MIT. Copyright (c) 2010-2017 Alexandre Mutel, 2017-2023 Jeremy Koritzinsky,
+   2023-2024 Amer Koleci.
    https://github.com/SharpGenTools/SharpGenTools
 
 6. C#/WinRT runtime and the Windows SDK projection (WinRT.Runtime.dll, Microsoft.Windows.SDK.NET.dll)
@@ -52,8 +55,8 @@ commercial use and redistribution under the conditions given below.
    Inno Setup License, https://jrsoftware.org/files/is/license.txt
 
 
-MIT License (components 2–6)
-----------------------------
+MIT License (components 2–5 and WinRT.Runtime.dll in 6)
+--------------------------------------------------------
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
 associated documentation files (the "Software"), to deal in the Software without restriction,
 including without limitation the rights to use, copy, modify, merge, publish, distribute,

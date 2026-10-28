@@ -32,7 +32,9 @@ limits, no account, no telemetry, no automatic updates.
 - **Fast**: hardware encoding with Intel Quick Sync (H.264 or AV1), or Windows' own H.264 encoder on
   other hardware. Saving is a rename, not a second pass.
 - Lives in the **tray**: the close button hides the window, shortcuts keep working.
-- Interface in **English and Russian**, light and dark theme following Windows.
+- Interface in **English and Russian** — it starts in your Windows language (Russian on a Russian
+  Windows, English otherwise) and can be switched in **Settings → General → Language**; light and
+  dark theme following Windows.
 
 <p align="center">
   <img src="docs/images/panel-en.png" alt="The floating panel while recording: timer, microphone and system sound levels, pause, stop" width="460"><br>

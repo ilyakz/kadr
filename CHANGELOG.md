@@ -10,6 +10,7 @@
 - All screens at once: in one video, laid out as in Windows display settings, or each screen into its own file.
 - Kadr's window hides while you select a region, so it never covers what you select.
 - The default audio track is encoded at a higher bitrate, so Windows players always play the mix.
+- The first start uses your Windows language (English or Russian).
 
 **Русский**
 
@@ -19,6 +20,7 @@
 - Все экраны сразу: одним видео, как экраны стоят в параметрах Windows, или каждый экран своим файлом.
 - Окно Kadr прячется на время выделения области и не закрывает то, что выделяете.
 - Основная звуковая дорожка кодируется с большим битрейтом, поэтому плееры Windows всегда играют микс.
+- При первом запуске язык интерфейса берётся из Windows (русский или английский).
 
 ## 1.0.0
 
